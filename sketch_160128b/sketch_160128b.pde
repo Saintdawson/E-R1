@@ -6,4 +6,4 @@ void draw (){ //functions over and over
    background(random(255),random(0),random(255));
    delay(5); //pause a sec
   }
-}
+} 
