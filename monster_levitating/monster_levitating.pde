@@ -1,14 +1,27 @@
-void setup(){ 
-  size(1000,1000);
+float arms = 100;
+float lav = 140;
+float speed = 0;
+float gravity = 0.01;
+void setup(){
+  size(640,360);
+  
 }
 
 void draw(){
   background(255);
+    fill(175);
+  stroke(0);
   
  ellipseMode(CENTER);
  rectMode(CENTER);
  
-  translate(100,100);
+ lav = lav + speed;
+ speed = speed+gravity;
+ if(lav > 200){
+ speed = speed * -0.95;
+lav = 200;  
+ }
+  translate(200,lav);
   
   //body
   stroke(0);
@@ -36,5 +49,10 @@ void draw(){
   fill(0,255);
   quad(-80,5,-80,75,80,5,80,75);
   strokeWeight(1);
-  
-}  
+  arms = arms + speed;
+ speed = speed+gravity;
+ if(arms < 140){
+ speed = speed * -0.95;
+arms = 140;  
+ }
+}
