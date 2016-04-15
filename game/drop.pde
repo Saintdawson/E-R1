@@ -3,6 +3,9 @@ class Drop{
   float speed;
   float c;
   float r;//size of our drop
+  //keep trac of wether drop is 
+  //still being used
+  boolean finished = false;
   
   Drop(){
     r = 8;
@@ -21,7 +24,7 @@ class Drop{
       ellipse(x,y + i*4, i*2, i*2);
     }
   }
-  boolean reachedottom(){
+  boolean reachedBottom(){
     if(y > height + r*4){
       return true;
     } else {
@@ -29,10 +32,13 @@ class Drop{
     }
   }
   //function for when drop is caught
-  void caught(){
-    //drop stop or stop drop
-    speed = 0;
-    //move drop
-    y = -1000;
+  //void caught(){
+  //  //drop stop or stop drop
+  //  speed = 0;
+  //  //move drop
+  //  y = -1000;
+  //}
+  void finished(){
+    finished = true;
   }
 }
