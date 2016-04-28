@@ -21,7 +21,7 @@ void setup() {
 }
 
 void draw() {
-  background(255);
+  background(255,150);
 
   if (gameOver) {
     textFont(f,48);
