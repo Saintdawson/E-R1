@@ -17,8 +17,8 @@ class Catcher {
   
   void display(){
     stroke(0);
-    fill(255,0,255);
-    ellipse(x,y + r*4, r*2,r*2);
+    fill(col);
+    ellipse(x,y,r*2,r*2);
     } 
   //function for drop /catcher intersection
   //TRUE OR FALSE is it intersecting?

@@ -67,7 +67,7 @@ void draw() {
         score++;
       }
     }
-  }
+  
   if (levelCounter >=drops.length) {
     level++;
     levelCounter=0;
